@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gsvhandbook.bdevelopers.lini.com.gsvhandbook">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Year_One.YearOne"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_year_one"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="gsvhandbook.bdevelopers.lini.com.gsvhandbook.MainActivity" />
+
+        <activity
+            android:name=".Year_Two.YearTwo"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_year_two"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gsvhandbook.bdevelopers.lini.com.gsvhandbook.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ResultActivity"
+            android:label="@string/title_activity_test"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gsvhandbook.bdevelopers.lini.com.gsvhandbook.MainActivity" />
+        </activity>
+        <activity android:name=".About" />
+        <activity
+            android:name=".Year_Three.YearThree"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_year_three"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gsvhandbook.bdevelopers.lini.com.gsvhandbook.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Year_Four.YearFour"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_year_four"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gsvhandbook.bdevelopers.lini.com.gsvhandbook.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Year_Five.YearFive"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_year_five"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gsvhandbook.bdevelopers.lini.com.gsvhandbook.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

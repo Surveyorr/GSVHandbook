@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">GSV Handbook</string>
+    <string name="app_ver">Version 0.0.123 beta</string>
+    <string name="title_activity_year_one">Year One</string>
+    <string name="y1">Year One</string>
+    <string name="y2">Year Two</string>
+    <string name="y3">Year Three</string>
+    <string name="y4">Year Four</string>
+    <string name="y5">Year Five</string>
+    <string name="title_home">First Semester</string>
+    <string name="title_dashboard">Second Semester</string>
+    <string name="title_notifications">Lecturers</string>
+    <string name="header">Thank you for downloading the Departmental Handbook. Please scroll down to select your level</string>
+    <string name="title_activity_year_two">Year Two</string>
+    <string name="progress">Progress</string>
+    <string name="y1course">18 Courses</string>
+    <string name="y2course">18 Courses</string>
+    <string name="y3course">19 Courses</string>
+    <string name="y4course">9 Courses</string>
+    <string name="y5course">15 Courses</string>
+    <string name="cop">"\u00a9 Bdevelopers" </string>
+    <!-- Lecturers -->
+
+    <string name="y1lec">8 Lecturers</string>
+    <string name="y2lec">10 Lecturers</string>
+    <string name="y3lec">13 Lecturers</string>
+    <string name="y4lec">6 Lecturers</string>
+    <string name="y5lec">11 Lecturers</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">GSV Course HandBook</string>
+    <string name="nav_header_subtitle">Made in Geoinformatics and Surveying</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_info">Info</string>
+    <string name="title_activity_test">Result</string>
+    <string name="title_activity_bottom_test">bottomTest</string>
+    <string name="title_activity_year_three">YearThree</string>
+    <string name="title_activity_year_four">Year Four</string>
+    <string name="title_activity_year_five">Year Five</string>
+    <string name="msg">We found out that you do not have the Uniuyo Portal app installed.
+                            Would you like to download it now?
+    </string>
+    <!--Lecturers of Geoinformatics department-->
+    <string name="hod">Dr (Surv) Aniekan Eyo</string>
+    <string name="scor">Dr (Surv) A Ekpa</string>
+    <string name="fmal">Surv I. B. Udoh</string>
+    <string name="fmal2">Mrs. Inemesit</string>
+    <string name="eoff">Surv I. Eyohefen</string>
+    <string name="ana">Dr (Surv) Onuwa L. Okwashi</string>
+    <string name="con">Surv E. E. Ikpene</string>
+    <string name="prof">Prof U Ono</string>
+    <string name="prof2">Prof Ochinaka</string>
+    <string name="pa">Mr Etuk</string>
+    <string name="mas">Mr O Ubom</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
