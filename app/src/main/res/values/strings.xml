@@ -28,6 +28,7 @@
     <string name="y5lec">11 Lecturers</string>
 
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="und">Coming Soon</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -35,6 +36,8 @@
     <string name="nav_header_subtitle">Made in Geoinformatics and Surveying</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_info">Info</string>
+    <string name="name">Name</string>
+    <string name="reg">Reg. No.</string>
     <string name="title_activity_test">Result</string>
     <string name="title_activity_bottom_test">bottomTest</string>
     <string name="title_activity_year_three">YearThree</string>
@@ -45,17 +48,54 @@
     </string>
     <!--Lecturers of Geoinformatics department-->
     <string name="hod">Dr (Surv) Aniekan Eyo</string>
-    <string name="scor">Dr (Surv) A Ekpa</string>
-    <string name="fmal">Surv I. B. Udoh</string>
-    <string name="fmal2">Mrs. Inemesit</string>
-    <string name="eoff">Surv I. Eyohefen</string>
-    <string name="ana">Dr (Surv) Onuwa L. Okwashi</string>
-    <string name="con">Surv E. E. Ikpene</string>
-    <string name="prof">Prof U Ono</string>
-    <string name="prof2">Prof Ochinaka</string>
-    <string name="pa">Mr Etuk</string>
-    <string name="mas">Mr O Ubom</string>
+    <string name="anie"><b>Area of Specialization</b>\nDigital Mapping\nRemote Sensing\n
+        <b>Courses Handled\n</b>
+        
+        Remote Sensing I and II \n Survey Laws \n </string>
+
+    <string name="ekpa">Dr (Surv) A Ekpa</string>
+    <string name="ekp">Area of Specialization\n
+        Hydrographic Surveying and Geoinformatics</string>
+    Courses Handled\n
+    Hydrographic Surveying I
+
+    <string name="ibu">Surv I. B. Udoh</string>
+
+    <string name="ison">Surv Mfon A Isong</string>
+    <string name="iso">Photogrammetry\n Remote Sensing</string>
+
+    <string name="inem">Mrs. Inemesit D Etang</string>
+
+    <string name="raph">Surv Raphael</string>
+
+    <string name="ekwere">Surv Uko J Ekwere</string>
+
+    <string name="eoff">Surv Ini E Eyoefen</string>
+
+    <string name="Okwa">Dr (Surv) Onuwa S H Okwashi</string>
+
+    <string name="ikpene">Surv Ezekiel E. Ikpene</string>
+
+    <string name="ono">Prof Matthew N Ono</string>
+
+    <string name="ochi">Prof Ochinaka</string>
+
+    <string name="etuk">Mr Ufot S Etuk</string>
+
+    <string name="ubom">Mr Okon E Ubom</string>
+
+    <string name="wog">Mr Timothy Wogor</string>
+
+    <string name="mfon">Mr Mfon A Udoh</string>
+    <string name="mu">Land Surveying</string>
+
+    <string name="nde">Mr Christopher Ndehedehe</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mssg">This is the early release of this app and some features may be unavailable/unstable. We also intend to keep to app ads free. To support development, please send a review or some supoort</string>
+    <!-- Our Contributors -->
+    <string name="ee">I designed the courses layouts and the accompanying UI</string>
+
 </resources>

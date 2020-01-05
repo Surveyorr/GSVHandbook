@@ -299,13 +299,12 @@
 
                 <Button
                     android:id="@+id/sug"
-                    android:layout_width="wrap_content"
+                    android:layout_width="180dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:background="#FFC107"
-                    android:text="Send"
-                    android:textAllCaps="false"
-                    android:typeface="monospace" />
+                    android:elevation="20dp"
+                    android:background="@drawable/button"
+                    android:text="Send" />
 
             </LinearLayout>
 
@@ -677,7 +676,16 @@
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+            <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        </com.google.android.gms.ads.AdView>
         </LinearLayout>
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

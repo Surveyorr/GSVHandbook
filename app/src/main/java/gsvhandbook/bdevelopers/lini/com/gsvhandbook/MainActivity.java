@@ -1,7 +1,6 @@
 package gsvhandbook.bdevelopers.lini.com.gsvhandbook;
 
 import android.app.ProgressDialog;
-import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -18,15 +17,20 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 public class MainActivity extends AppCompatActivity {
 
+    private AdView mAdView;
     public CardView y1;
     public CardView y2;
     public CardView y3;
@@ -42,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //MobileAds.initialize(getApplicationContext(), "ca-app-pub-4629534606171179~9444063496");
+        //mAdView = findViewById(R.id.adView);
+        //AdRequest adRequest = new AdRequest.Builder().build();
+        //mAdView.loadAd(adRequest);
+        FirstRun();
         if (savedInstanceState == null) {
             FragmentManager manager = getSupportFragmentManager();
             fragment = new HomeFragment();
@@ -54,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
-
 //Drawer Layout
         drawerLayout = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -69,8 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                         int id = item.getItemId();
-                        if (id == R.id.home) {
-
+                        if (id == R.id.home && fragment != new HomeFragment()) {
                             FragmentManager manager = getSupportFragmentManager();
                             fragment = new HomeFragment();
                             manager.beginTransaction().replace(R.id.content_frame, fragment, "Home").commit();
@@ -82,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                             fragment = new LecturersFragment();
                             manager.beginTransaction().replace(R.id.content_frame, fragment).addToBackStack(null).commit();
                             getSupportActionBar().setTitle("Lecturers");
-                            onBackPressed();
+                            //onBackPressed();
                         } else if (id == R.id.time) {
                             FragmentManager manager = getSupportFragmentManager();
                             fragment = new TimeTable();
@@ -99,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                                         .show();
                                 AlertDialog.Builder feed = new AlertDialog.Builder(MainActivity.this);
                                 feed.setTitle("Check Result");
-                                feed.setMessage("We detected that you do not have the Uniuyo Portal app on your phone. \n" + "\t Would you like to download it now?. Select NO to check result directly");
+                                feed.setMessage("We detected that you do not have the Uniuyo Portal app on your phone. Would you like to download it now?. Select NO to check result directly");
                                 feed.setNegativeButton("NO", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -146,49 +153,37 @@ public class MainActivity extends AppCompatActivity {
                             }
 
                         } else if (id == R.id.reg) {
-                            Intent reg = new Intent(Intent.ACTION_MAIN);
-                            reg.setComponent(new ComponentName("com.bdevelop.lini.uniuyodb", "com.bdevelop.lini.uniuyodb.ResultActivity"));
-                            if (reg != null) {
-                                startActivity(reg);
-                            }
+                            /**Intent reg = new Intent(Intent.ACTION_MAIN);
+                             reg.setComponent(new ComponentName("com.bdevelop.lini.uniuyodb", "com.bdevelop.lini.uniuyodb.ResultActivity"));
+                             if (reg != null) {
+                             startActivity(reg);
+                             }**/
+                            //else{
+                            Toast.makeText(MainActivity.this, "This feature is coming soon in the next release",
+                                    Toast.LENGTH_SHORT)
+                                    .show();
+                            AlertDialog.Builder feed = new AlertDialog.Builder(MainActivity.this);
+                            feed.setTitle("Course Registration");
+                            feed.setMessage("We detected that you do not have the Uniuyo Portal app on your phone. Would you like to download it now?. Select NO to check result directly");
+                            feed.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    Intent res = new Intent(getApplicationContext(), ResultActivity.class);
+                                    startActivity(res);
+                                }
+                            });
+                            //}
                         } else if (id == R.id.ab) {
                             FragmentManager manager = getSupportFragmentManager();
                             fragment = new About();
-                            manager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-
+                            manager.beginTransaction().replace(R.id.content_frame, fragment).addToBackStack(null).commit();
+                            toolbar.setTitle("About");
                         } else if (id == R.id.sha) {
-                            Intent share = new Intent(Intent.ACTION_SEND);
+                            //Intent share = new Intent(Intent.ACTION_SEND);
                             //startActivity(share);
 
                         } else if (id == R.id.fb) {
-                            final AlertDialog.Builder feed = new AlertDialog.Builder(MainActivity.this);
-                            feed.setTitle("Select An Option");
-                            String[] method = {"E-mail", "Form", "Text", "WhatsApp"};
-
-                            feed.setItems(method, new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    switch (i) {
-                                        case 0:
-                                            Intent mail = new Intent("android.intent.action.SEND");
-                                            mail.setType("text/Email");
-                                            mail.putExtra("Subject", 4);
-                                            mail.putExtra("android.intent.extra.EMAIL", new String[]{"bdevelopersteam@gmail.com"});
-                                            startActivity(mail);
-                                        case 1:
-
-                                        case 2:
-                                            return;
-                                        case 3:
-                                            Uri uri = Uri.parse("smsto:" + "+2347055899240");
-                                            Intent wa = new Intent(Intent.ACTION_SENDTO, uri);
-                                            wa.putExtra("chat", true);
-                                            wa.setPackage("com.whatsapp");
-                                            startActivity(Intent.createChooser(wa, ""));
-                                    }
-                                }
-                            });
-                            feed.show();
+                            feedback();
                         }
                         drawerLayout.closeDrawers();
                         return true;
@@ -234,13 +229,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-
-        if (exit && fragment == new HomeFragment()) {
-            finish();
+        drawerLayout.closeDrawers();
+        if (drawerLayout.isDrawerOpen(Gravity.LEFT) && fragment == new HomeFragment()) {
+            drawerLayout.closeDrawers();
         } else {
             FragmentManager manager = getSupportFragmentManager();
             fragment = new HomeFragment();
-            manager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+            manager.beginTransaction().replace(R.id.content_frame, fragment).detach(fragment).commit();
             getSupportActionBar().setTitle(R.string.app_name);
             //exit = true;
             new Handler().postDelayed(new Runnable() {
@@ -252,5 +247,69 @@ public class MainActivity extends AppCompatActivity {
 
         }
         super.onBackPressed();
+    }
+
+    public void feedback() {
+        final AlertDialog.Builder feed = new AlertDialog.Builder(MainActivity.this);
+        feed.setTitle("Select An Option");
+        String[] method = {"E-mail", "Form", "Text", "WhatsApp"};
+
+        feed.setItems(method, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                switch (i) {
+                    case 0:
+                        Intent mail = new Intent("android.intent.action.SEND");
+                        mail.setType("text/Email");
+                        mail.putExtra("Subject", "GSV Handbook");
+                        mail.putExtra("android.intent.extra.EMAIL", new String[]{"bdevelopersteam@gmail.com"});
+                        startActivity(mail);
+                    case 1:
+                        //Intent sendMail = new Intent("android.intent.action.SEND");
+                        //sendMail.setType("text/Email");
+                        //sendMail.putExtra("Subject", 1);
+                        //sendMail.putExtra("android.intent.extra.EMAIL", new String[]{"bdevelopersteam@gmail.com"});
+                        //startActivity(sendMail);
+                    case 2:
+                        Uri ur = Uri.parse("sms:" + "+2347055899240");
+                        Intent sms = new Intent(Intent.ACTION_SENDTO, ur);
+                        sms.putExtra("sms", "message");
+                        startActivity(sms);
+                    case 3:
+                        Uri uri = Uri.parse("smsto:" + "+2347055899240");
+                        Intent wa = new Intent(Intent.ACTION_SENDTO, uri);
+                        wa.putExtra("chat", 1);
+                        wa.setPackage("com.whatsapp");
+                        startActivity(Intent.createChooser(wa, ""));
+                }
+            }
+        });
+        feed.show();
+    }
+    public void FirstRun() {
+        boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("isFirstRun", true);
+        if (isFirstRun) {
+            // Place your dialog code here to display the dialog
+            AlertDialog.Builder CL = new AlertDialog.Builder(this);
+            CL.setTitle("Notice")
+                    .setCancelable(false)
+                    .setMessage(R.string.mssg)
+                    .setNeutralButton("SEND", new DialogInterface.OnClickListener(){
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            feedback();
+                        }
+                    })
+                    .setPositiveButton("DISMISS", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                        }
+                    });
+            CL.show();
+            getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                    .edit()
+                    .putBoolean("isFirstRun", false)
+                    .apply();
+        }
     }
 }

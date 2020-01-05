@@ -15,6 +15,7 @@ import gsvhandbook.bdevelopers.lini.com.gsvhandbook.Year_Four.YearFour;
 import gsvhandbook.bdevelopers.lini.com.gsvhandbook.Year_One.YearOne;
 import gsvhandbook.bdevelopers.lini.com.gsvhandbook.Year_Three.YearThree;
 import gsvhandbook.bdevelopers.lini.com.gsvhandbook.Year_Two.YearTwo;
+import gsvhandbook.bdevelopers.lini.com.gsvhandbook.MainActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -87,15 +88,11 @@ public class HomeFragment extends Fragment {
         suggest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent sendMail = new Intent("android.intent.action.SEND");
-                sendMail.setType("text/Email");
-                sendMail.putExtra("Subject", 4);
-                sendMail.putExtra("android.intent.extra.EMAIL", new String[]{"bdevelopersteam@gmail.com"});
-                startActivity(sendMail);
-
+                MainActivity act = (MainActivity)getActivity();
+                act.feedback();
             }
         });
-
+        suggest.animate();
         return view;
     }
 

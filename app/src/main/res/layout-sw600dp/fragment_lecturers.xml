@@ -26,7 +26,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/ochi"
-            android:layout_width="300dp"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
@@ -52,7 +52,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/ono"
-            android:layout_width="300dp"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
@@ -79,7 +79,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/raph"
-            android:layout_width="300dp"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
@@ -104,7 +104,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/ison"
-            android:layout_width="300dp"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
@@ -129,7 +129,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/ekpa"
-            android:layout_width="300dp"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
@@ -153,7 +153,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/onuwa"
-            android:layout_width="300dp"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
@@ -178,7 +178,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/ekwere"
-            android:layout_width="300dp"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
@@ -203,7 +203,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/eyoh"
-            android:layout_width="300dp"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
@@ -228,7 +228,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/nde"
-            android:layout_width="300dp"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
@@ -253,7 +253,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/inem"
-            android:layout_width="300dp"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
@@ -278,7 +278,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/eyoe"
-            android:layout_width="300dp"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
@@ -303,7 +303,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/ibu"
-            android:layout_width="300dp"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
@@ -328,7 +328,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/ikp"
-            android:layout_width="300dp"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
@@ -353,7 +353,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/ma"
-            android:layout_width="300dp"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
@@ -378,7 +378,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/ubom"
-            android:layout_width="300dp"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
@@ -403,7 +403,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/etu"
-            android:layout_width="300dp"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
@@ -428,7 +428,7 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/wog"
-            android:layout_width="300dp"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
