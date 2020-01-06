@@ -5,3 +5,5 @@ I'll edit it add and push
 
 okay this worked. I'am gonna push back
 delete from local, gitignore and try to push
+
+added to ignore
