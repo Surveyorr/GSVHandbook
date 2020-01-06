@@ -1,9 +1,0 @@
-I am trying to test git pull
-I expect to have this file in my local version.
-I'll edit it add and push
-
-
-okay this worked. I'am gonna push back
-delete from local, gitignore and try to push
-
-added to ignore
